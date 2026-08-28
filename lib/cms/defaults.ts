@@ -1,0 +1,231 @@
+import type { WebDevelopmentService } from "@/lib/types";
+
+/** Built-in image library available in the admin media picker. */
+export const MEDIA_LIBRARY = [
+  { label: "Hero", path: "/images/hero-real.jpg" },
+  { label: "Studio", path: "/images/studio-real.jpg" },
+  { label: "Web", path: "/images/web-real.jpg" },
+  { label: "Commerce", path: "/images/commerce-real.jpg" },
+  { label: "SaaS", path: "/images/saas-real.jpg" },
+  { label: "Admin", path: "/images/admin-real.jpg" },
+  { label: "CTA Night", path: "/images/cta-real.jpg" },
+  { label: "Deliverables", path: "/images/deliverables-bg.jpg" },
+] as const;
+
+export const defaultWebDevelopmentService: WebDevelopmentService = {
+  slug: "web-development",
+  seoTitle: "خدمة البرمجة وتطوير المواقع",
+  seoDescription:
+    "نصمّم ونبني مواقع وتطبيقات ويب بأداء عالٍ وتهيئة SEO كاملة من أول يوم، باستخدام Next.js وTypeScript، مع معايير أمان مطبّقة من مرحلة التصميم.",
+
+  hero: {
+    primaryCta: "اطلب عرض سعر",
+    primaryCtaHref: "#cta",
+    secondaryCta: "شاهد كيف نعمل",
+    secondaryCtaHref: "#process",
+    rotateIntervalMs: 5000,
+    slides: [
+      {
+        image: "/images/hero-real.jpg",
+        eyebrow: "خدمة / البرمجة وتطوير المواقع",
+        title: "موقعك يُرسم مخططًا قبل ما يُبنى سطرًا",
+        subtitle:
+          "نحوّل فكرة مشروعك إلى مخطط تقني واضح، ثم نبنيه بكود نظيف وموثّق، جاهز للنمو من اليوم الأول لا بعد سنة من الترقيع.",
+      },
+      {
+        image: "/images/studio-real.jpg",
+        eyebrow: "خدمة / تخطيط تقني",
+        title: "كل صفحة لها مخطط قبل ما تُكتب",
+        subtitle:
+          "نحدد هيكل الصفحات والبيانات والتفاعلات مبكرًا، عشان التنفيذ يكون دقيق ومقاس على نمو حقيقي.",
+      },
+      {
+        image: "/images/deliverables-bg.jpg",
+        eyebrow: "خدمة / بناء وإطلاق",
+        title: "كود نظيف جاهز للتوسع من أول نسخة",
+        subtitle:
+          "Next.js وTypeScript بمعايير أمان وSEO مدمجة — تسليم موثّق على مستودعك، مش حلول مؤقتة.",
+      },
+    ],
+  },
+
+  intro: {
+    title: "ليه تحتاج موقع مبني صح من البداية؟",
+    body: "أغلب المواقع بتتعطل مش لأنها قديمة، لكن لأنها اتبنت بسرعة من غير مخطط واضح. إحنا بنبدأ بتحديد هيكل الصفحات والبيانات والأمان قبل ما نكتب أي كود، عشان الموقع يتحمّل نمو حقيقي في الزوار والمحتوى من غير ما يحتاج إعادة بناء كل شوية.",
+    backgroundImage: "/images/studio-real.jpg",
+    sideImage: "/images/studio-real.jpg",
+  },
+
+  capabilitiesHeading: {
+    eyebrow: "FIG. 01 — ما بنبنيه",
+    title: "أنواع المواقع والأنظمة اللي بنسلّمها",
+    description: "",
+  },
+  capabilities: [
+    {
+      title: "مواقع الشركات والمؤسسات",
+      description:
+        "موقع تعريفي كامل بالخدمات والفريق ونماذج الأعمال، مبني على Next.js لسرعة تحميل وتهيئة بحث قوية.",
+      image: "/images/web-real.jpg",
+      tag: "CORP",
+      details: ["Next.js + TypeScript", "تهيئة SEO من اليوم الأول", "أداء تحميل عالٍ"],
+      ctaLabel: "اطلب هذه الخدمة",
+      ctaHref: "#cta",
+    },
+    {
+      title: "متاجر إلكترونية",
+      description:
+        "نظام منتجات وطلبات وربط دفع، مع لوحة تحكم لإدارة المخزون والطلبات من غير تعقيد.",
+      image: "/images/commerce-real.jpg",
+      tag: "SHOP",
+      details: ["كتالوج ومنتجات", "ربط دفع وطلبات", "لوحة إدارة مخزون"],
+      ctaLabel: "اطلب هذه الخدمة",
+      ctaHref: "#cta",
+    },
+    {
+      title: "تطبيقات ويب وSaaS",
+      description:
+        "أنظمة بحسابات مستخدمين وصلاحيات (RBAC)، مبنية بواجهة NestJS خلفية قابلة للتوسع.",
+      image: "/images/saas-real.jpg",
+      tag: "SAAS",
+      details: ["حسابات وصلاحيات RBAC", "API قابل للتوسع", "واجهة NestJS خلفية"],
+      ctaLabel: "اطلب هذه الخدمة",
+      ctaHref: "#cta",
+    },
+    {
+      title: "لوحات تحكم إدارية",
+      description:
+        "واجهة إدارة موحّدة للمحتوى والخدمات والفريق والمدونة، بنفس مكونات التصميم المستخدمة في الموقع.",
+      image: "/images/admin-real.jpg",
+      tag: "ADMIN",
+      details: ["إدارة محتوى موحّدة", "صلاحيات فريق واضحة", "نفس نظام التصميم"],
+      ctaLabel: "اطلب هذه الخدمة",
+      ctaHref: "#cta",
+    },
+  ],
+
+  processHeading: {
+    eyebrow: "FIG. 02 — خطوات العمل",
+    title: "من الفكرة للإطلاق، خطوة بخطوة",
+    description: "خمس مراجعات مغلقة — كل مرحلة تُسلَّم قبل اللي بعدها.",
+  },
+  process: [
+    {
+      revision: "REV. 01",
+      title: "الاكتشاف وتحديد النطاق",
+      description:
+        "نجمع متطلباتك الفعلية ونحدد الصفحات والميزات المطلوبة، ونتفق على مخطط تقني واحد قبل أي تنفيذ.",
+    },
+    {
+      revision: "REV. 02",
+      title: "تصميم الواجهات",
+      description:
+        "نبني نظام تصميم موحّد (ألوان، خطوط، مكوّنات) يُستخدم في كل صفحات الموقع بدل ما كل صفحة تُصمم من الصفر.",
+    },
+    {
+      revision: "REV. 03",
+      title: "التطوير",
+      description:
+        "بناء الواجهة بـ Next.js وTypeScript، والخلفية بـ NestJS، مع مراجعة كود مستمرة عبر Git.",
+    },
+    {
+      revision: "REV. 04",
+      title: "الاختبار والتدقيق الأمني",
+      description:
+        "فحص المدخلات والصلاحيات والحماية من الثغرات الشائعة (XSS, SQL Injection) قبل أي إطلاق.",
+    },
+    {
+      revision: "REV. 05",
+      title: "الإطلاق والدعم",
+      description:
+        "رفع الموقع على بيئة الإنتاج، مع فترة دعم لمتابعة الأداء وإصلاح أي ملاحظات بعد الإطلاق.",
+    },
+  ],
+
+  deliverablesHeading: {
+    eyebrow: "FIG. 03 — قائمة التسليم",
+    title: "اللي هتستلمه في نهاية المشروع",
+    description: "تسليم واضح وموثّق — مش وعود عامة، عناصر فعلية بتستلمها مع المشروع.",
+  },
+  deliverables: [
+    { label: "كود مصدري كامل على مستودع Git خاص بيك" },
+    { label: "ملف توثيق تقني (README) لأي مطور يكمّل الشغل بعدين" },
+    { label: "دليل استخدام مبسّط لإدارة المحتوى من لوحة التحكم" },
+    { label: "تقرير أولي عن الأداء وتهيئة SEO" },
+    { label: "بيئة تجريبية (staging) للمراجعة قبل الإطلاق النهائي" },
+  ],
+  deliverablesBackground: "/images/deliverables-bg.jpg",
+
+  benefitsHeading: {
+    eyebrow: "FIG. 05 — ليه معانا",
+    title: "إيه اللي بيفرق في الطريقة دي",
+    description: "فروق تقنية ملموسة — مش شعارات تسويقية.",
+  },
+  benefits: [
+    {
+      title: "سرعة تحميل حقيقية",
+      description:
+        "استخدام SSR وSSG في Next.js يقلّل زمن ظهور الصفحة، وده بيأثر مباشرة على ترتيبك في نتائج البحث.",
+    },
+    {
+      title: "تهيئة بحث من اليوم الأول",
+      description:
+        "Metadata وStructured Data (JSON-LD) مبنية جوه كل صفحة، مش إضافة لاحقة بعد الإطلاق.",
+    },
+    {
+      title: "أمان مطبّق من التصميم",
+      description:
+        "HTTPS، تشفير كلمات المرور، حماية من CSRF وXSS، وصلاحيات مستخدمين واضحة (RBAC) من أول نسخة.",
+    },
+    {
+      title: "كود قابل للصيانة",
+      description:
+        "TypeScript ومكوّنات معاد استخدامها بدل تكرار الكود، عشان أي إضافة مستقبلية تاخد وقت أقل.",
+    },
+  ],
+
+  portfolio: {
+    eyebrow: "FIG. 04 — الأعمال",
+    title: "معرض الأعمال قيد الإعداد",
+    body: "لسه ما نشرنا مشاريع موثّقة هنا. أول مشروع نسلّمه هيتحوّل لدراسة حالة كاملة بالتفاصيل التقنية — ممكن يكون مشروعك.",
+    buttonLabel: "كن أول مشروع موثّق",
+    buttonHref: "#cta",
+    image: "/images/web-real.jpg",
+  },
+
+  faqsHeading: {
+    eyebrow: "FIG. 06 — أسئلة شائعة",
+    title: "أسئلة بيسألها العملاء قبل ما يبدأوا",
+    description: "إجابات مباشرة — اضغط على السؤال لفتح التفاصيل.",
+  },
+  faqs: [
+    {
+      question: "كم المدة المتوقعة لبناء الموقع؟",
+      answer:
+        "بتختلف حسب عدد الصفحات والميزات. بعد جلسة تحديد النطاق (REV. 01) بنقدر نديك جدول زمني دقيق بدل تقدير عام.",
+    },
+    {
+      question: "هل هستلم الكود المصدري بعد التسليم؟",
+      answer:
+        "أيوه، الكود بالكامل بيتسلّم على مستودع Git خاص بيك مع التوثيق، مش محبوس عندنا.",
+    },
+    {
+      question: "هل الموقع يدعم التوسع لاحقًا لتطبيق موبايل؟",
+      answer:
+        "الخلفية (NestJS) مبنية كـ API منفصل عن الواجهة، فتقدر تبني تطبيق موبايل يتصل بنفس الـ API من غير إعادة بناء الباك إند.",
+    },
+    {
+      question: "مين المسؤول عن الاستضافة بعد الإطلاق؟",
+      answer:
+        "بنساعدك تختار وتربط الاستضافة، والقرار والحساب بيفضل باسمك أنت بالكامل.",
+    },
+  ],
+
+  cta: {
+    title: "جاهز تبدأ مخطط موقعك؟",
+    body: "ابعتلنا تفاصيل مشروعك، ونرجع ليك بجلسة اكتشاف أولى وتحديد نطاق واضح قبل أي التزام.",
+    buttonLabel: "ابدأ المحادثة",
+    buttonHref: "/contact",
+    backgroundImage: "/images/cta-real.jpg",
+  },
+};

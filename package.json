@@ -1,0 +1,39 @@
+{
+  "name": "agency-service-web-development",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx --env-file=.env.local scripts/migrate.ts",
+    "db:seed": "tsx --env-file=.env.local scripts/seed.ts",
+    "db:setup": "npm run db:migrate && npm run db:seed"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1120.0",
+    "@aws-sdk/s3-request-presigner": "^3.1120.0",
+    "drizzle-orm": "^0.45.2",
+    "jose": "^6.2.10",
+    "next": "^14.2.5",
+    "postgres": "^3.4.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.13",
+    "@types/node": "^20.14.15",
+    "@types/react": "^18.3.3",
+    "autoprefixer": "^10.4.19",
+    "drizzle-kit": "^0.31.10",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7",
+    "tsx": "^4.23.12",
+    "typescript": "^5.5.4",
+    "vitest": "^4.1.11"
+  }
+}
